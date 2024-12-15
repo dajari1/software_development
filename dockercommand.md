@@ -9,7 +9,9 @@ ls -lart
 # Comand to build your image
  $ docker build -t feyiimage .
 
-  docker rmi image seunimage
+# command to remove docker images individually
+  docker rmi image seunimage 
+  docker rmi image seunimage busimage
 # ======================================================================================================
 # Apply force to delete 1st, 2nd, 3rd, 4th
  $ docker images purge
@@ -51,3 +53,7 @@ bb0b75a1d316   feyiimage   "python ./main.py"   36 seconds ago   Up 35 seconds (
 # To create and  push an image to docker hub
  $ docker run --name rainbow-container -dp 5004:5004 feyidocker/rainbowimage:1.0
  $ docker push feyidocker/rainbowimage:1.0
+
+ # Command to push images to Docker hub
+ $ docker build -t username/nameing
+ 
